@@ -1,33 +1,25 @@
-# Httpora — AGENTS.md
+# AGENTS.md — Httpora
 
-## Project Overview
+Phenotype repository
 
-HTTP client/server framework with middleware support.
+## Quick Links
 
-## Agent Rules
+- **Local CLAUDE.md:** See `CLAUDE.md` in this repository for project-specific guidance
+- **Phenotype org governance:** `/Users/kooshapari/CodeProjects/Phenotype/repos/CLAUDE.md`
+- **Global agent guidance:** `~/.claude/AGENTS.md`
+- **AgilePlus work tracking:** `cd /repos/AgilePlus && agileplus <command>`
 
-1. **Read CLAUDE.md first** before making changes
-2. **Test first** - write tests before implementation
-3. **Clippy clean** - all lints must pass before PR
-4. **No unsafe code** unless absolutely necessary
+## Key Workflows
 
-## Quality Gates
+1. **Before implementing:** Check AgilePlus for existing specs
+2. **Quality gates:** Run linters, tests, and docs validation (see CLAUDE.md)
+3. **Worktrees:** Use `repos/Httpora-wtrees/<topic>/` for feature work
+4. **Integration:** Commit to canonical repo (`main`) after quality gates pass
 
-```bash
-cargo test
-cargo clippy -- -D warnings
-cargo fmt --check
-cargo doc
-```
+## Project-Specific Gotchas
 
-## Architecture
+See CLAUDE.md for language stack, build commands, and testing requirements.
 
-Follow tower-based middleware pattern:
-- Implement `tower::Layer` for new middleware
-- Implement `tower::Service` for request handlers
-- Async-first design with tokio
+---
 
-## See Also
-
-- **CLAUDE.md**: `./CLAUDE.md`
-- **PRD.md**: `./PRD.md`
+**Parent contract:** Extends Phenotype-org governance. See `CLAUDE.md` and parent `AGENTS.md` for complete operating procedures.
